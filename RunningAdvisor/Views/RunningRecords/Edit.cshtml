@@ -1,0 +1,42 @@
+﻿@model RunningAdvisor.ViewModels.RunningDataViewModel
+
+@{
+    ViewData["Title"] = "Edit Advanced Data";
+}
+
+<h2>Edit Advanced Data</h2>
+
+<form asp-action="Edit">
+    <input asp-for="Id" type="hidden" />
+    <div>
+        <label>Time 10k</label>
+        <input asp-for="Time10k" type="text" class="form-control" />
+    </div>
+    <div>
+        <label>Avg Heart Rate 10k</label>
+        <input asp-for="AvgHeartRate10k" type="number" class="form-control" />
+    </div>
+    <div>
+        <label>Time 21k</label>
+        <input asp-for="Time21k" type="text" class="form-control" />
+    </div>
+    <div>
+        <label>Avg Heart Rate 21k</label>
+        <input asp-for="AvgHeartRate21k" type="number" class="form-control" />
+    </div>
+    <div>
+        <label>Time 42k</label>
+        <input asp-for="Time42k" type="text" class="form-control" />
+    </div>
+    <div>
+        <label>Avg Heart Rate 42k</label>
+        <input asp-for="AvgHeartRate42k" type="number" class="form-control" />
+    </div>
+    <div>
+        <label>Cadence</label>
+        <input asp-for="Cadence" type="number" class="form-control" />
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>

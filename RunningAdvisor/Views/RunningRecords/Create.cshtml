@@ -1,0 +1,46 @@
+﻿@model RunningAdvisor.ViewModels.RunningDataViewModel
+
+@{
+    ViewData["Title"] = "Create Data";
+}
+
+<h2>Create Data</h2>
+
+<form asp-action="Create">
+    <div>
+        <label>Time 10k</label>
+        <input asp-for="Time10k" type="text" />
+    </div>
+    <div>
+        <label>Avg Heart Rate 10k</label>
+        <input asp-for="AvgHeartRate10k" type="number" />
+    </div>
+    <div>
+        <label>Time 21k</label>
+        <input asp-for="Time21k" type="text" />
+    </div>
+    <div>
+        <label>Avg Heart Rate 21k</label>
+        <input asp-for="AvgHeartRate21k" type="number" />
+    </div>
+    <div>
+        <label>Time 42k</label>
+        <input asp-for="Time42k" type="text" />
+    </div>
+    <div>
+        <label>Avg Heart Rate 42k</label>
+        <input asp-for="AvgHeartRate42k" type="number" />
+    </div>
+    <div>
+        <label>Cadence</label>
+        <input asp-for="Cadence" type="number" />
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

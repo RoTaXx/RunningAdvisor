@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Welcome to Running Advisor</h1>
+<h5> Please choose your running level, don't be ashamed of clicking "I am begginer" <br> with this plan you will get better in no time '</h5>
+
+<div>
+    <p>@ViewBag.Weather</p>
+    <a href="/BeginnerRunningRecords/Index" class="btn btn-primary">I am a beginner runner</a>
+    <a href="/RunningRecords/Index" class="btn btn-primary">I am an advanced runner</a>
+</div>
+
+@* <div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+ *@

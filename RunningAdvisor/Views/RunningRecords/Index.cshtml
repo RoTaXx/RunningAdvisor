@@ -1,0 +1,48 @@
+﻿@model IEnumerable<RunningAdvisor.Models.Entities.RunningData>
+
+@{
+    ViewData["Title"] = "Running Records";
+}
+
+<h2>Running Records</h2>
+
+<p>
+    <a asp-action="Create">Create Data</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Time 10k</th>
+            <th>Avg Heart Rate 10k</th>
+            <th>Time 21k</th>
+            <th>Avg Heart Rate 21k</th>
+            <th>Time 42k</th>
+            <th>Avg Heart Rate 42k</th>
+            <th>Cadence</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Time10k</td>
+                <td>@item.AvgHeartRate10k</td>
+                <td>@item.Time21k</td>
+                <td>@item.AvgHeartRate21k</td>
+                <td>@item.Time42k</td>
+                <td>@item.AvgHeartRate42k</td>
+                <td>@item.Cadence</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                    <form asp-action="Delete" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    <a asp-action="GeneratePlan" asp-route-id="@item.Id" class="btn btn-secondary">Generate Training Plan</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
