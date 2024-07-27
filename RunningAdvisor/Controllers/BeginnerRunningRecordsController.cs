@@ -3,9 +3,11 @@ using RunningAdvisor.Models.Entities;
 using RunningAdvisor.ViewModels;
 using System.Text;
 using RunningAdvisor.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RunningAdvisor.Controllers
 {
+    [Authorize]
     public class BeginnerRunningRecordsController : Controller
     {
         private readonly BeginnerRunningService _beginnerRunningService;

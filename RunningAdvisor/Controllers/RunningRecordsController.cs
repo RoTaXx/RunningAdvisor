@@ -5,9 +5,11 @@ using System.Text;
 using RunningAdvisor.ViewModels;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RunningAdvisor.Controllers
 {
+    [Authorize]
     public class RunningRecordsController : Controller
     {
         private readonly RunningService _runningService;
